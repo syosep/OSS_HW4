@@ -3,14 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const [fontSize, setFontSize] = useState(16); // 초기 폰트 크기 설정
+  const [fontSize, setFontSize] = useState(50);
 
   const handleMouseEnter = () => {
-    setFontSize(prevSize => prevSize + 5); // 마우스가 들어오면 폰트 크기 증가
+    setFontSize(prevSize => prevSize + 5);
   };
 
   const handleMouseLeave = () => {
-    setFontSize(16); // 마우스가 나가면 폰트 크기 초기화
+    setFontSize(50);
   };
 
   return (
@@ -20,8 +20,8 @@ function App() {
         <p
           id="hello"
           style={{ fontSize: `${fontSize}px`, transition: 'font-size 0.3s ease' }}
-          onMouseEnter={handleMouseEnter} // 마우스가 들어오면 호출
-          onMouseLeave={handleMouseLeave} // 마우스가 나가면 호출
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           Hello World!!!
         </p>
