@@ -6,7 +6,7 @@ function App() {
   const [fontSize, setFontSize] = useState(50);
 
   const handleMouseEnter = () => {
-    setFontSize(prevSize => prevSize + 5);
+    setFontSize(prevSize => prevSize + 10);
   };
 
   const handleMouseLeave = () => {
