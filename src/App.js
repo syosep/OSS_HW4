@@ -13,6 +13,13 @@ function App() {
     setFontSize(50);
   };
 
+  const handleLinkClick = (e) => {
+    const proceed = window.confirm("외부 사이트로 연결됩니다. 연결하시겠습니까?");
+    if (!proceed) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -33,6 +40,7 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleLinkClick}
         >
           Learn React
         </a>
